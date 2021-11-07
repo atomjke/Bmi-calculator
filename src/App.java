@@ -14,6 +14,8 @@ public class App {
             System.out.print("Input mode value: (1 is metric) (2 is inches + pounds) (3 is inches + feets + pounds): ");
             
             modeIndex = input.nextInt();
+
+            input.close();
         }
 
         switch (modeIndex) {
@@ -45,6 +47,8 @@ public class App {
 
         weight = input.nextDouble();
 
+        input.close();
+
         BMI = weight / (height * height);
 
         System.out.println();
@@ -63,6 +67,8 @@ public class App {
         System.out.print("Your weight in pounds: ");
 
         weight = input.nextDouble();
+
+        input.close();
 
         //weight (lb) / [height (in)]^2 x 703
         BMI = weight * (703 / (height * height));
@@ -87,6 +93,8 @@ public class App {
         System.out.print("Your weight in pounds: ");
 
         weight = input.nextDouble();
+
+        input.close();
 
         //d(″) = d(ft) × 12
         height = heightFeet * 12 + heightInches;
